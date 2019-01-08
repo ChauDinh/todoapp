@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Todo from "./components/Todo";
+import Header from "./components/layout/Header";
+import AddTodo from "./components/AddTodo";
 import './App.css';
 
 class App extends Component {
@@ -38,8 +40,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>App</h1>
+        <div className="container">
+        <Header />
+        <AddTodo />
         <Todo todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo}/>
+        </div>
       </div>
     );
   }
